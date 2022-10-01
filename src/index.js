@@ -68,4 +68,15 @@ window.addEventListener("load", (event) => {
             event.target.style.color = '';
         }, 500)
     }, false);
+
+    // preventDefault()
+    const buttons = document.querySelectorAll(".destination .btn")
+    console.log(buttons)
+
+    Array.from(buttons).forEach(btn =>{
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+            console.log(`The ${event.target.textContent} is not working!!!`)
+        })
+    })
 })
