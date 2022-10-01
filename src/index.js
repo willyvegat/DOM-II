@@ -42,6 +42,22 @@ window.addEventListener("load", (event) => {
     // 6-mousemove 
     document.body.addEventListener('mousemove', evt => {
         const { clientX, clientY } = evt;
-        console.log(`mouse is at ${clientX}, ${clientY}`)
+        //console.log(`mouse is at ${clientX}, ${clientY}`);
     })
+
+    // 7-mouseenter
+    // 8-mouseleave
+    const destinations = document.querySelectorAll('.destination');
+    //console.log(destinations);
+    for(let destination of destinations) {
+        destination.addEventListener('mouseenter', () => {
+            //console.log(destinations);
+            destination.style.fontWeight = 'bold';
+        })
+        destination.addEventListener('mouseleave', () => {
+            setTimeout(() => {
+            destination.style.fontWeight = 'initial';
+            }, 500)
+        })
+    }
 })
