@@ -38,4 +38,10 @@ window.addEventListener("load", (event) => {
             document.body.innerHTML =  "<h1>PAGED DESTROYED</h1>";
         }
     })
+
+    // 6-mousemove 
+    document.body.addEventListener('mousemove', evt => {
+        const { clientX, clientY } = evt;
+        console.log(`mouse is at ${clientX}, ${clientY}`)
+    })
 })
