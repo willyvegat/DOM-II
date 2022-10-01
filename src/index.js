@@ -25,4 +25,9 @@ window.addEventListener("load", (event) => {
     document.body.addEventListener("click", (evt) => {
         evt.target.classList.toggle("mirror");
     })
+
+    // 4-dblclick
+    document.body.addEventListener('dblclick', evt => {
+        evt.target.innerHTML = '';
+    })
 })
