@@ -30,4 +30,12 @@ window.addEventListener("load", (event) => {
     document.body.addEventListener('dblclick', evt => {
         evt.target.innerHTML = '';
     })
+
+    // 5-keydown
+    window.addEventListener('keydown', evt => {
+        //console.log(evt);
+        if(evt.key == 6) {
+            document.body.innerHTML =  "<h1>PAGED DESTROYED</h1>";
+        }
+    })
 })
