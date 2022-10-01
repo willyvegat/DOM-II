@@ -60,4 +60,12 @@ window.addEventListener("load", (event) => {
             }, 500)
         })
     }
+
+    // 9-mouseover
+    document.body.addEventListener('mouseover', event => {
+        event.target.style.color = 'pink';
+        setTimeout(() => {
+            event.target.style.color = '';
+        }, 500)
+    }, false);
 })
